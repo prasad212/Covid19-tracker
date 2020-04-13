@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 class Maha extends Component {
     constructor(props){
       super(props)
@@ -26,17 +26,18 @@ class Maha extends Component {
   render(){
     return(
     
-    <div >
-      <table>
+    
+      <table align='left'>
           <tr>
               <th>sr no</th>
               <th>District</th>
               <th>Confirmed</th>
           </tr>
       
-          {this.state.district.map(list =>
+          {this.state.district.map((list,index) =>
         (
             <tr>
+                <td>{index=index+1}</td>
           <td> {list[0]}</td> <td>{list[1].confirmed}</td>
           
           </tr>
@@ -44,9 +45,9 @@ class Maha extends Component {
         
         ))}
       
-    )
+    
     </table>
-    </div>);
+    );
   }
   
   }
