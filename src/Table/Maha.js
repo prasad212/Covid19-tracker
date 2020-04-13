@@ -23,6 +23,7 @@ class Maha extends Component {
   console.log(this.state.district);
   
   }
+
   render(){
     return(
     
@@ -36,7 +37,7 @@ class Maha extends Component {
       
           {this.state.district.map((list,index) =>
         (
-            <tr>
+            <tr >
                 <td>{index=index+1}</td>
           <td> {list[0]}</td> <td>{list[1].confirmed}</td>
           

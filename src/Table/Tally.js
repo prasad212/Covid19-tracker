@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Tally.css'
+import FlexLayout from "flexlayout-react";
 
 class Tally extends Component{
     constructor(props){
@@ -35,7 +36,7 @@ class Tally extends Component{
                         (
                             <tr>
                                 <td>{index=index+1}</td>
-                             <td>{list[1].state}</td>
+                             <td >{list[1].state}</td>
                         <td>{list[1].confirmed}</td>
                         <td>{list[1].active}</td>
                         <td>{list[1].recovered}</td>
