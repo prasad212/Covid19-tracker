@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^7.2.1",
     "flexlayout-react": "^0.3.6",
     "gh-pages": "^2.2.0",
-    "homepage": "https://prasad212.github.io/Covid19-tracker",
     "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
