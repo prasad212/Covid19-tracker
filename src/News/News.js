@@ -10,7 +10,7 @@ constructor(props){
 }
 
 async componentDidMount(){
-    const url='http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=254af5c7543644ea95f7480f596cec11';
+    const url='https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=254af5c7543644ea95f7480f596cec11';
     const responce =await fetch(url);
     const data =await responce.json();
  
