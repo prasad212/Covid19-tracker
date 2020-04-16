@@ -14,11 +14,11 @@ class Tally extends Component{
         const url="https://api.covid19india.org/data.json";
         const response =await fetch(url);
         const data =await response.json();
-        console.log(data.statewise);
+       // console.log(data.statewise);
         this.setState({status : Object.entries(data.statewise)});
         //this.setState({status :Object.defineProperties(data.statewise)})
         //console.log(this.state.status);
-        console.log(this.state.status[0][1]);
+        //console.log(this.state.status[0][1]);
 
     }
     render(){

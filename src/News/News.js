@@ -15,7 +15,7 @@ async componentDidMount(){
     const data =await responce.json();
  
     this.setState({news : data.articles})
-    console.log(this.state.news)
+   // console.log(this.state.news)
 
 }
 
