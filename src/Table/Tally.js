@@ -23,7 +23,7 @@ class Tally extends Component{
     }
     render(){
         return(
-                <table align='center'>
+                <table className='w3-table w3-margin'>
                     <tr>
                         <th>sr no</th>
                         <th>State</th>

@@ -20,8 +20,9 @@ constructor(props){
        render() {
          
         return (
-            <div>
-       <h1> { this.state.time}</h1>
+            <div className="w3-bar w3-border w3-blue">
+                <h3 className="w3-bar-item">Covid19-Tracker</h3>
+                     <h3 className='w3-bar-item   w3-right'> { this.state.time}</h3>
        </div>
         )}
 }

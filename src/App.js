@@ -14,13 +14,20 @@ class App extends Component{
   
 render(){
   return(
-  
-    <div >
-
+    <div>
+   
+   
      <Time></Time>
+     <div className='w3-container w3-cell w3-mobile'>
      <News></News>
-  <Maha></Maha>
+     </div>
+     <div className='w3-container w3-cell w3-mobile'> 
+      <Maha></Maha>
+  </div>
+    <div className='w3-container w3-cell w3-mobile'>
   <Tally></Tally>
+  </div>
+  
   
   </div>);
 

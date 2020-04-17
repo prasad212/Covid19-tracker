@@ -28,7 +28,7 @@ class Maha extends Component {
     return(
     
     
-      <table align='left'>
+      <table class='w3-table w3-border w3-margin-top'>
           <tr>
               <th>sr no</th>
               <th>District</th>

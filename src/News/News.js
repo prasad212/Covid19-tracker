@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
-import './news.css'
+
+import 'w3-css/w3.css';
 
 class News extends Component{
 constructor(props){
@@ -20,11 +21,35 @@ async componentDidMount(){
 }
 
 render(){return (
+    <div >
+        {this.state.news.map(
+            (articles)=>(
+               <div className='w3-card-4'>
+               <header>
+                    <h4 className='w3-margin-left w3-margin-top w3-border'>{articles.source.name}</h4>
+                </header>
+                    <div className='w3-container'>
+                        <img src={articles.urlToImage} className='w3-image w3-round'></img>
+
+                    </div>
+                    <div className ='w3-container'>
+            <p>{articles.description}</p>
+                    </div>
+                    <footer className='w3-container w3-blue '>
+                    <a  href={articles.url} className='w3-margin'> Click For more</a>
+                    </footer>
+               </div>
+            
+        ))}
+       
+
+
+    </div>
 
       
        
       
-          <section className="mw7 centre  ">
+        /*  <section className="mw7 centre  ">
               <h2 className="athelas ph3 ph0-l">News</h2>
              
                { this.state.news.map((articles)=>(
@@ -36,13 +61,13 @@ render(){return (
                {articles.title}
            </h3>
           
-           <p className="f5 f4-l lh-copy athelas">
+           <p className="f5 f4-l lh-copy athelas" style={{fontSize: '100%'}}>
                {articles.description}
            </p>
            <a  href={articles.url}>Click For more</a>
            </div >
-           <div  className="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns"> 
-                <img src={articles.urlToImage} width='500' height='250' className='db'></img>
+           <div  className="pl3-ns order-1 order-2-ns mb4 mb1-ns w-100 w-40-ns"> 
+                <img src={articles.urlToImage} style={{width :'300px',height :'200px'}} className='db'></img>
 
            </div>
            </div> 
@@ -51,7 +76,7 @@ render(){return (
           
      </section>
   
-  
+  */
 )
 } 
     
