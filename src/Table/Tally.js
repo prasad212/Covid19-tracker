@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Tally.css'
-import FlexLayout from "flexlayout-react";
+
 
 class Tally extends Component{
     constructor(props){
