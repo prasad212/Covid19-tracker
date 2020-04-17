@@ -24,24 +24,24 @@ render(){return (
       
        
       
-          <section class="mw7 right  ">
-              <h2 class="athelas ph3 ph0-l">News</h2>
+          <section className="mw7 centre  ">
+              <h2 className="athelas ph3 ph0-l">News</h2>
              
                { this.state.news.map((articles)=>(
               <article className="pv4 bt bb b--black-10 ph3 ph0-l">    
            <div className="flex flex-column flex-row-ns">
                <div class="w-10 w-6-ns pr3-ns order-2 order-1-ns">
                <h4> {articles.source.name}</h4>
-           <h3 class="f3 athelas mt0 lh-title" >
+           <h3 className="f3 athelas mt0 lh-title" >
                {articles.title}
            </h3>
           
-           <p class="f5 f4-l lh-copy athelas">
+           <p className="f5 f4-l lh-copy athelas">
                {articles.description}
            </p>
            <a  href={articles.url}>Click For more</a>
            </div >
-           <div  class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns"> 
+           <div  className="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns"> 
                 <img src={articles.urlToImage} width='500' height='250' className='db'></img>
 
            </div>
