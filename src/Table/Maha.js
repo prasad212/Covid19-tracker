@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+
 class Maha extends Component {
-    constructor(props){
-      super(props)
+    constructor(){
+      super()
       this.state = {
     district : [],
     
@@ -28,7 +29,7 @@ class Maha extends Component {
     return(
     
     
-      <table class='w3-table w3-border w3-margin-top'>
+      <table className='w3-table w3-border w3-margin-top'>
           <tr>
               <th>sr no</th>
               <th>District</th>
@@ -39,7 +40,7 @@ class Maha extends Component {
         (
             <tr >
                 <td>{index=index+1}</td>
-          <td> {list[0]}</td> <td>{list[1].confirmed}</td>
+          <td>  {list[0]}</td> <td>{list[1].confirmed}</td>
           
           </tr>
           

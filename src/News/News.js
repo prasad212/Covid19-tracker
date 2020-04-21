@@ -3,8 +3,8 @@ import React,{Component} from 'react'
 import 'w3-css/w3.css';
 
 class News extends Component{
-constructor(props){
-    super(props);
+constructor(){
+    super();
     this.state ={
         news:[]
     }
@@ -24,16 +24,16 @@ render(){return (
     <div >
         {this.state.news.map(
             (articles)=>(
-               <div className='w3-card-4'>
+               <div className='w3-card-4 '>
                <header>
-                    <h4 className='w3-margin-left w3-margin-top w3-border'>{articles.source.name}</h4>
+                    <h4 className='w3-margin-left w3-margin-top  '>{articles.source.name}</h4>
                 </header>
                     <div className='w3-container'>
                         <img src={articles.urlToImage} className='w3-image w3-round'></img>
 
                     </div>
                     <div className ='w3-container'>
-            <p>{articles.description}</p>
+                            <p>{articles.description}</p>
                     </div>
                     <footer className='w3-container w3-blue '>
                     <a  href={articles.url} className='w3-margin'> Click For more</a>
