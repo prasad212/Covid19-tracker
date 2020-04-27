@@ -33,7 +33,7 @@ render(){return (
                     <p className='f5 f4-1 lh-copy athelas'>{articles.description}</p>
                </div>
                <div className='pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns'>
-                   <img className='db mw10' src={articles.urlToImage} style={{height:'110%',width :'110%'}}alt='' ></img>
+                   <img className='db mw10' src={articles.urlToImage} style={{height:'100%',width :'100%'}}alt='' ></img>
                </div>
 
                </div>

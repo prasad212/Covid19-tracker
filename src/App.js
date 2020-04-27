@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import Tally from './Table/Tally'
-import Maha from './Table/Maha'
+import Tally from './Component/Table/India/India'
+import Maha from './Component/Table/Maharashtra/Maha'
 
-import Time from './Time';
-import News from './News/News'
+import Time from './Component/Time/Time';
+import News from './Component/News/News'
 
 
 

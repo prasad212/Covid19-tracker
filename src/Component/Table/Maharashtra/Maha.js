@@ -28,7 +28,8 @@ class Maha extends Component {
   render(){
     return(
     
-    
+      <div>
+      <h4>Maharashtra</h4>
       <table className='w3-table w3-border w3-margin-top'>
           <tr>
               <th>sr no</th>
@@ -49,6 +50,7 @@ class Maha extends Component {
       
     
     </table>
+    </div>
     );
   }
   

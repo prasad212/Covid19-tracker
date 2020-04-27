@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Tally.css'
+import './India.css'
 
 
 class Tally extends Component{
@@ -23,6 +23,8 @@ class Tally extends Component{
     }
     render(){
         return(
+            <div>
+            <h4>India</h4>
                 <table className='w3-table w3-border w3-round-small w3-margin-top'>
                     <tr>
                         <th>sr no</th>
@@ -48,6 +50,7 @@ class Tally extends Component{
                             
                         </tr>
                 </table>
+                </div>
 
         );
     }
