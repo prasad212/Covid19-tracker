@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 
 import 'w3-css/w3.css';
+import './news.css'
 
 class News extends Component{
 constructor(){
@@ -21,30 +22,31 @@ async componentDidMount(){
 }
 
 render(){return (
-    <div >
+    <section className='mw7 center' >
+        <h2 className='athelas ph3 ph0-1'>News</h2>
         {this.state.news.map(
             (articles)=>(
-               <div className='w3-card-4 '>
-               <header>
-                    <h4 className='w3-margin-left w3-margin-top  '>{articles.source.name}</h4>
-                </header>
-                    <div className='w3-container'>
-                        <img src={articles.urlToImage} className='w3-image w3-round'></img>
-
-                    </div>
-                    <div className ='w3-container'>
-                            <p>{articles.description}</p>
-                    </div>
-                    <footer className='w3-container w3-blue '>
-                    <a  href={articles.url} className='w3-margin'> Click For more</a>
-                    </footer>
+               <article className='pv4 bt bb b--black-10 ph3 ph0-1 '>
+               <div className='flex flex-column flex-row-ns'>
+               <div className='w-100 w-60-ns pr3-ns order-2 order-1-ns'>
+                    <h1 className='f3 athelas mt0 lh-title'>{articles.title}</h1>
+                    <p className='f5 f4-1 lh-copy athelas'>{articles.description}</p>
                </div>
+               <div className='pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns'>
+                   <img className='db mw10' src={articles.urlToImage} style={{height:'110%',width :'110%'}}alt='' ></img>
+               </div>
+
+               </div>
+               <p className='f6 lh-copy gray mv0'>By <span className='ttu'>{articles.source.name}</span></p>
+               <time className='f6 db gray'>{articles.publishedAt}</time>
+               <a class="mt710 f4 fw6 db dark-blue no-underline underline-hover" href={articles.url}>Click For More</a>
+               </article>
             
         ))}
        
 
 
-    </div>
+    </section>
 
       
        

@@ -11,22 +11,39 @@ import News from './News/News'
 
 
 class App extends Component{
-  
+  constructor(){
+    super();
+    this.state ={
+      route:'news'
+    }
+  }
+
+  onBuclick = (route)=>{
+      this.setState({route:route})
+}
 render(){
   return(
     <div>
    
-   
-     <Time></Time>
-     <div className='w3-container w3-cell w3-mobile'>
+    
+     <Time onBuclick={this.onBuclick}></Time>
+     { this.state.route ==='news' ?
+     <div className='w3-container '>
      <News></News>
      </div>
-     <div className='w3-container w3-cell w3-mobile'> 
+     :
+     this.state.route ==='india' ?
+       
+    <div className='w3-container '>
+     <Tally></Tally>
+      </div>
+     :
+     <div className='w3-container'> 
       <Maha></Maha>
   </div>
-    <div className='w3-container w3-cell w3-mobile'>
-  <Tally></Tally>
-  </div>
+  
+     }
+     
   
   
   </div>);
