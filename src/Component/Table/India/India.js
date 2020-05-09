@@ -25,7 +25,7 @@ class Tally extends Component{
         return(
             <div>
             <h4>India</h4>
-                <table className='w3-table w3-border w3-round-small w3-margin-top'>
+                <table className='w3-table-all w3-small w3-border w3-round-small w3-margin-top'>
                     <tr>
                         <th>sr no</th>
                         <th>State</th>

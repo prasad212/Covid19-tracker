@@ -30,21 +30,49 @@ class Maha extends Component {
     
       <div>
       <h4>Maharashtra</h4>
-      <table className='w3-table w3-border w3-margin-top'>
+      <table className='w3-table-all w3-tiny w3-border w3-margin-top'>
           <tr>
               <th>sr no</th>
               <th>District</th>
               <th>Confirmed</th>
+              <th>Active</th>
+              <th>Recovered</th>
+              <th>Deaths</th>
           </tr>
       
           {this.state.district.map((list,index) =>
-        (
-            <tr >
-                <td>{index=index+1}</td>
-          <td>  {list[0]}</td> <td>{list[1].confirmed}</td>
+        (     
+          list[1].active === 0 ?
+            <tr className="w3-green">
+            <td>{index=index+1}</td>
+            <td>  {list[0]}</td>
+            <td>{list[1].confirmed}</td>
+            <td>{list[1].active}</td>
+            <td>{list[1].recovered}</td>
+            <td>{list[1].deceased}</td>
+            </tr>
+          :
+          list[1].active < 15 ?
+          <tr className="w3-orange">
+            <td>{index=index+1}</td>
+            <td>  {list[0]}</td>
+            <td>{list[1].confirmed}</td>
+            <td>{list[1].active}</td>
+            <td>{list[1].recovered}</td>
+            <td>{list[1].deceased}</td>
+            </tr>
+          :
           
-          </tr>
+          <tr className="w3-red">
+            <td>{index=index+1}</td>
+            <td>  {list[0]}</td>
+            <td>{list[1].confirmed}</td>
+            <td>{list[1].active}</td>
+            <td>{list[1].recovered}</td>
+            <td>{list[1].deceased}</td>
+            </tr>
           
+
         
         ))}
       
