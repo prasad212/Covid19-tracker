@@ -21,15 +21,20 @@ constructor(){
        render() {
          
         return (
+            <div>
 
-            <div className="w3-bar w3-border w3-blue">
-
-                <h4 className="w3-bar-item">Covid19-Tracker</h4>
-                        <h4 onClick={() =>this.props.onBuclick('news')}className ='w3-bar-item w3-button w3-margin-left  w3-hover-white'>News</h4>
-                        <h4 onClick={() =>this.props.onBuclick('india')}className ='w3-bar-item w3-button w3-margin-left  w3-hover-white'>India</h4>
-                        <h4 onClick={() =>this.props.onBuclick('maharashtra')}className ='w3-bar-item w3-button w3-margin-left w3-hover-white'>Maharashtra</h4>
-                        	<h4 className ='w3-bar-item w3-right'> { this.state.time}</h4>
-             </div>
+            <div className="w3-bar w3-mobile w3-border w3-small w3-blue  " style={{height:"100%"}}>
+            <h6 className='w3-bar-item'>Covid19-tracker</h6>
+            <h6 className='w3-bar-item w3-right'>{this.state.time}</h6>
+            
+            
+            </div>
+            <div className="w3-bar w3-mobile w3-small">
+            <button onClick={() =>this.props.onBuclick('news')}className ='  w3-button w3-round-large w3-margin-left w3-margin-top w3-blue w3-hover-red'>News</button>
+            <button onClick={() =>this.props.onBuclick('india')}className ='w3-button w3-round-large w3-margin-left w3-margin-top w3-blue w3-hover-red'>India</button>
+            <button onClick={() =>this.props.onBuclick('maharashtra')}className ='w3-button w3-round-large w3-margin-top w3-margin-left w3-blue w3-hover-red'>Maharashtra</button>
+            </div>
+            </div>
         )}
 }
 

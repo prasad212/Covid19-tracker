@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import moment from "moment"
 import './App.css';
 import Tally from './Component/Table/India/India'
 import Maha from './Component/Table/Maharashtra/Maha'
@@ -14,19 +14,28 @@ class App extends Component{
   constructor(){
     super();
     this.state ={
-      route:'news'
+      route:'news',
+      time :'' 
     }
-  }
+  }componentDidMount(){
+    setInterval(()=>this.tm(),1000);
+}    
+tm(){
+  this.setState({time : moment().format('MMMM Do YYYY, h:mm:ss a')});
+}
 
-  onBuclick = (route)=>{
+
+onBuclick = (route)=>{
       this.setState({route:route})
 }
+
 render(){
   return(
-    <div>
+    <div >
    
     
-     <Time onBuclick={this.onBuclick}></Time>
+    <Time onBuclick={this.onBuclick}></Time>
+
      { this.state.route ==='news' ?
      <div className='w3-container '>
      <News></News>
@@ -40,12 +49,11 @@ render(){
      :
      <div className='w3-container'> 
       <Maha></Maha>
-  </div>
+     </div>
   
      }
-     
-  
-  
+      
+   
   </div>);
 
 }
